@@ -67,19 +67,19 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     if (record->event.pressed) {
         switch (keycode) {
             case CYCL_APP:
-                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_GRV));
+                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_GRV)SS_UP(X_LCMD)SS_UP(X_GRV));
                 return false;
             case ZOOM_IN:
-                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_EQL));
+                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_EQL)SS_UP(X_LCMD)SS_UP(X_EQL));
                 return false;
             case ZOOM_OUT:
-                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_MINUS));
+                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_MINUS)SS_UP(X_LCMD)SS_UP(X_MINUS));
                 return false;
             case SCRNSHOT:
-                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_LSFT)SS_DOWN(X_4));
+                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_LSFT)SS_DOWN(X_4)SS_UP(X_LCMD)SS_UP(X_LSFT)SS_UP(X_4));
                 return false;
             case FIGMA_UI:
-                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_BSLS));
+                SEND_STRING(SS_DOWN(X_LCMD)SS_DOWN(X_BSLS)SS_UP(X_LCMD)SS_UP(X_BSLS));
                 return false;
         }
     }
